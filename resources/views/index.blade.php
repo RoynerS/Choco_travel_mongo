@@ -74,7 +74,7 @@
                     <div class="col-sm-2">
                         <div class="logo">
                             <a href="index.html">
-                                Cho<span id="p">coTr</span><span>avel</span>
+                                <img src="{{url('assets/images/logo/CHOCO_TRAVEL-removebg-preview.png')}}" alt="">
                             </a>
                         </div><!-- /.logo-->
                     </div><!-- /.col-->
@@ -106,7 +106,7 @@
                                                 LOGOUT
                                             </a>
                                         </li>
-                                        
+
                                     @else
 
                                         <li class="smooth">
@@ -139,7 +139,7 @@
                                     Bienvenidos al mejor vividero del mundo
                                 </h2>
                                 <div class="about-btn">
-                                    
+
                                 </div><!--/.about-btn-->
                             </div><!--/.about-us-txt-->
                         </div><!--/.single-about-us-->
@@ -160,404 +160,96 @@
 
     <!--service start-->
     <section id="service" class="service">
-        <div class="container">
+        <div class="tour-section">
+            <div class="container">
+                <div class="card-grid">
+                    <!-- Tarjeta 1 -->
+                    <div class="card">
+                        <h3>Explore la Selva Tropical</h3>
+                        <p>Descubre la biodiversidad única del Chocó con recorridos guiados por expertos.</p>
+                    </div>
+                    <!-- Tarjeta 2 -->
+                    <div class="card">
+                        <h3>Alojamientos Ecológicos</h3>
+                        <p>Hospédate en cabañas sostenibles rodeadas de naturaleza virgen.</p>
+                    </div>
+                    <!-- Tarjeta 3 -->
+                    <div class="card">
+                        <h3>Aventuras en el Océano</h3>
+                        <p>Experimenta el avistamiento de ballenas, buceo y deportes acuáticos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <div class="service-counter text-center">
-
-                <div class="col-md-4 col-sm-4">
-                    <div class="single-service-box">
-                        <div class="service-img">
-                            
-                        </div><!--/.service-img-->
-                        <div class="service-content">
-                            <h2>
-                                <a href="#">
-                                    amazing tour packages
-                                </a>
-                            </h2>
-                            <p>Duis aute irure dolor in velit esse cillum dolore eu fugiat nulla.</p>
-                        </div><!--/.service-content-->
-                    </div><!--/.single-service-box-->
-                </div><!--/.col-->
-
-                <div class="col-md-4 col-sm-4">
-                    <div class="single-service-box">
-                        <div class="service-img">
-                           
-                        </div><!--/.service-img-->
-                        <div class="service-content">
-                            <h2>
-                                <a href="#">
-                                    book top class hotel
-                                </a>
-                            </h2>
-                            <p>Duis aute irure dolor in velit esse cillum dolore eu fugiat nulla.</p>
-                        </div><!--/.service-content-->
-                    </div><!--/.single-service-box-->
-                </div><!--/.col-->
-
-                <div class="col-md-4 col-sm-4">
-                    <div class="single-service-box">
-                        <div class="statistics-img">
-                            
-                        </div><!--/.service-img-->
-                        <div class="service-content">
-
-                            <h2>
-                                <a href="#">
-                                    online flight booking
-                                </a>
-                            </h2>
-                            <p>Duis aute irure dolor in velit esse cillum dolore eu fugiat nulla.</p>
-                        </div><!--/.service-content-->
-                    </div><!--/.single-service-box-->
-                </div><!--/.col-->
-
-            </div><!--/.statistics-counter-->
-        </div><!--/.container-->n
 
     </section><!--/.service-->
     <!--service end-->
 
     <!--galley start-->
     <section id="gallery" class="gallery">
-        <div class="container">
-            <div class="gallery-details">
-                <div class="gallary-header text-center">
-                    <h2>
-                        Destinos
-                    </h2>
-                    <p>
-                        
-                    </p>
-                </div><!--/.gallery-header-->
-                <div class="gallery-box">
-                    <div class="gallery-content">
-                        <div class="filtr-container">
-                            <div class="row">
+        <div class="tour-section">
+            <div class="container">
+                <h2 class="section-title">Explora los Municipios del Chocó</h2>
+                <div class="card-grid">
+                    @php
+                        $municipios = [
+                            "Acandí",
+                            "Alto Baudó",
+                            "Bagadó",
+                            "Bahía Solano",
+                            "Bajo Baudó",
+                            "Bojayá",
+                            "Cértegui",
+                            "Condoto",
+                            "El Cantón de San Pablo",
+                            "El Carmen de Atrato",
+                            "Istmina",
+                            "Juradó",
+                            "Lloró",
+                            "Medio Atrato",
+                            "Medio Baudó",
+                            "Medio San Juan",
+                            "Nóvita",
+                            "Nuquí",
+                            "Quibdó",
+                            "Río Iró",
+                            "Río Quito",
+                            "Riosucio",
+                            "San José del Palmar",
+                            "Sipí",
+                            "Tadó",
+                            "Unguía",
+                            "Unión Panamericana",
+                            "Carmen del Darién",
+                            "Bahía Málaga",
+                            "Puerto Meluk",
+                            "Andagoya"
+                        ];
 
-                                <div class="col-md-6">
-                                    <div class="filtr-item">
-                                        <img src={{url('assets/images/gallary/1.jpeg')}} alt="portfolio image" />
-                                        <div class="item-title">
-                                            <a href="#">
-                                                Bahia Solano
-                                            </a>
-                                            <p><span></span><span></span></p>
-                                        </div><!-- /.item-title -->
-                                    </div><!-- /.filtr-item -->
-                                </div><!-- /.col -->
+                    @endphp
 
-                                <div class="col-md-6">
-                                    <div class="filtr-item">
-                                        <img src="assets/images/gallary/g2.jpg" alt="portfolio image" width="100px" />
-                                        <div class="item-title">
-                                            <a href="#">
-                                                Acandi
-                                            </a>
-                                            <p><span></span><span></span></p>
-                                        </div> <!-- /.item-title-->
-                                    </div><!-- /.filtr-item -->
-                                </div><!-- /.col -->
-
-                                <div class="col-md-4">
-                                    <div class="filtr-item">
-                                        <img src="assets/images/gallary/g3.jpg" alt="portfolio image" />
-                                        <div class="item-title">
-                                            <a href="#">
-                                                lloro
-                                            </a>
-                                            <p><span></span><span></span></p>
-                                        </div><!-- /.item-title -->
-                                    </div><!-- /.filtr-item -->
-                                </div><!-- /.col -->
-
-                                <div class="col-md-4">
-                                    <div class="filtr-item">
-                                        <img src="assets/images/gallary/g4.jpg" alt="portfolio image" />
-                                        <div class="item-title">
-                                            <a href="#">
-                                                Itsmina
-                                            </a>
-                                            <p><span></span><span></span></p>
-                                        </div> <!-- /.item-title-->
-                                    </div><!-- /.filtr-item -->
-                                </div><!-- /.col -->
-
-                                <div class="col-md-4">
-                                    <div class="filtr-item">
-                                        <img src="assets/images/gallary/g5.jpg" alt="portfolio image" />
-                                        <div class="item-title">
-                                            <a href="#">
-                                                Certegui
-                                            </a>
-                                            <p><span></span><span></span></p>
-                                        </div> <!-- /.item-title-->
-                                    </div><!-- /.filtr-item -->
-                                </div><!-- /.col -->
-
-                                <div class="col-md-8">
-                                    <div class="filtr-item">
-                                        <img src="assets/images/gallary/g6.jpg" alt="portfolio image" />
-                                        <div class="item-title">
-                                            <a href="#">
-                                                Condoto
-                                            </a>
-                                            <p><span></span><span></span></p>
-                                        </div> <!-- /.item-title-->
-                                    </div><!-- /.filtr-item -->
-                                </div><!-- /.col -->
-
-                            </div><!-- /.row -->
-
-                        </div><!-- /.filtr-container-->
-                    </div><!-- /.gallery-content -->
-                </div><!--/.galley-box-->
-            </div><!--/.gallery-details-->
-        </div><!--/.container-->
+                    @foreach ($municipios as $municipio)
+                        <div class="card">
+                            @if(Auth::check())
+                                <a href="{{ route('municipios.show', ['nombre' => $municipio]) }}" class="card-link">
+                                    <h3>{{ $municipio }}</h3>
+                                    <p>Descubre la belleza y cultura de {{ $municipio }}. ¡Una experiencia única en el Chocó!
+                                    </p>
+                                </a>
+                            @else
+                                <p><a href="{{ route('login') }}" >{{ $municipio }}<br> Inicia sesión para ver más detalles</a></p>
+                            @endif
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
 
     </section><!--/.gallery-->
     <!--gallery end-->
 
 
-
-    <!-- testemonial Start -->
-    <section class="testemonial">
-        <div class="container">
-
-            <div class="gallary-header text-center">
-                <h2>
-                    clients reviews
-                </h2>
-                <p>
-                    Duis aute irure dolor in velit esse cillum dolore eu fugiat nulla.
-                </p>
-
-            </div><!--/.gallery-header-->
-
-            <div class="owl-carousel owl-theme" id="testemonial-carousel">
-
-                <div class="home1-testm item">
-                    <div class="home1-testm-single text-center">
-                        <div class="home1-testm-img">
-                            <img src="assets/images/client/testimonial1.jpg" alt="img" />
-                        </div><!--/.home1-testm-img-->
-                        <div class="home1-testm-txt">
-                            <span class="icon section-icon">
-                                <i class="fa fa-quote-left" aria-hidden="true"></i>
-                            </span>
-                            <p>
-                                Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam.
-                            </p>
-                            <h3>
-                                <a href="#">
-                                    kevin watson
-                                </a>
-                            </h3>
-                            <h4>london, england</h4>
-                        </div><!--/.home1-testm-txt-->
-                    </div><!--/.home1-testm-single-->
-
-                </div><!--/.item-->
-
-                <div class="home1-testm item">
-                    <div class="home1-testm-single text-center">
-                        <div class="home1-testm-img">
-                            <img src="assets/images/client/testimonial2.jpg" alt="img" />
-                        </div><!--/.home1-testm-img-->
-                        <div class="home1-testm-txt">
-                            <span class="icon section-icon">
-                                <i class="fa fa-quote-left" aria-hidden="true"></i>
-                            </span>
-                            <p>
-                                Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam.
-                            </p>
-                            <h3>
-                                <a href="#">
-                                    kevin watson
-                                </a>
-                            </h3>
-                            <h4>london, england</h4>
-                        </div><!--/.home1-testm-txt-->
-                    </div><!--/.home1-testm-single-->
-
-                </div><!--/.item-->
-
-                <div class="home1-testm item">
-                    <div class="home1-testm-single text-center">
-                        <div class="home1-testm-img">
-                            <img src="assets/images/client/testimonial1.jpg" alt="img" />
-                        </div><!--/.home1-testm-img-->
-                        <div class="home1-testm-txt">
-                            <span class="icon section-icon">
-                                <i class="fa fa-quote-left" aria-hidden="true"></i>
-                            </span>
-                            <p>
-                                Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam.
-                            </p>
-                            <h3>
-                                <a href="#">
-                                    kevin watson
-                                </a>
-                            </h3>
-                            <h4>london, england</h4>
-                        </div><!--/.home1-testm-txt-->
-                    </div><!--/.home1-testm-single-->
-
-                </div><!--/.item-->
-
-                <div class="home1-testm item">
-                    <div class="home1-testm-single text-center">
-                        <div class="home1-testm-img">
-                            <img src="assets/images/client/testimonial1.jpg" alt="img" />
-                        </div><!--/.home1-testm-img-->
-                        <div class="home1-testm-txt">
-                            <span class="icon section-icon">
-                                <i class="fa fa-quote-left" aria-hidden="true"></i>
-                            </span>
-                            <p>
-                                Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam.
-                            </p>
-                            <h3>
-                                <a href="#">
-                                    kevin watson
-                                </a>
-                            </h3>
-                            <h4>london, england</h4>
-                        </div><!--/.home1-testm-txt-->
-                    </div><!--/.home1-testm-single-->
-
-                </div><!--/.item-->
-
-                <div class="home1-testm item">
-                    <div class="home1-testm-single text-center">
-                        <div class="home1-testm-img">
-                            <img src="assets/images/client/testimonial2.jpg" alt="img" />
-                        </div><!--/.home1-testm-img-->
-                        <div class="home1-testm-txt">
-                            <span class="icon section-icon">
-                                <i class="fa fa-quote-left" aria-hidden="true"></i>
-                            </span>
-                            <p>
-                                Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam.
-                            </p>
-                            <h3>
-                                <a href="#">
-                                    kevin watson
-                                </a>
-                            </h3>
-                            <h4>london, england</h4>
-                        </div><!--/.home1-testm-txt-->
-                    </div><!--/.home1-testm-single-->
-
-                </div><!--/.item-->
-
-                <div class="home1-testm item">
-                    <div class="home1-testm-single text-center">
-                        <div class="home1-testm-img">
-                            <img src="assets/images/client/testimonial1.jpg" alt="img" />
-                        </div><!--/.home1-testm-img-->
-                        <div class="home1-testm-txt">
-                            <span class="icon section-icon">
-                                <i class="fa fa-quote-left" aria-hidden="true"></i>
-                            </span>
-                            <p>
-                                Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam.
-                            </p>
-                            <h3>
-                                <a href="#">
-                                    kevin watson
-                                </a>
-                            </h3>
-                            <h4>london, england</h4>
-                        </div><!--/.home1-testm-txt-->
-                    </div><!--/.home1-testm-single-->
-
-                </div><!--/.item-->
-
-                <div class="home1-testm item">
-                    <div class="home1-testm-single text-center">
-                        <div class="home1-testm-img">
-                            <img src="assets/images/client/testimonial1.jpg" alt="img" />
-                        </div><!--/.home1-testm-img-->
-                        <div class="home1-testm-txt">
-                            <span class="icon section-icon">
-                                <i class="fa fa-quote-left" aria-hidden="true"></i>
-                            </span>
-                            <p>
-                                Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam.
-                            </p>
-                            <h3>
-                                <a href="#">
-                                    kevin watson
-                                </a>
-                            </h3>
-                            <h4>london, england</h4>
-                        </div><!--/.home1-testm-txt-->
-                    </div><!--/.home1-testm-single-->
-
-                </div><!--/.item-->
-
-                <div class="home1-testm item">
-                    <div class="home1-testm-single text-center">
-                        <div class="home1-testm-img">
-                            <img src="assets/images/client/testimonial2.jpg" alt="img" />
-                        </div><!--/.home1-testm-img-->
-                        <div class="home1-testm-txt">
-                            <span class="icon section-icon">
-                                <i class="fa fa-quote-left" aria-hidden="true"></i>
-                            </span>
-                            <p>
-                                Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam.
-                            </p>
-                            <h3>
-                                <a href="#">
-                                    kevin watson
-                                </a>
-                            </h3>
-                            <h4>london, england</h4>
-                        </div><!--/.home1-testm-txt-->
-                    </div><!--/.home1-testm-single-->
-
-                </div><!--/.item-->
-
-                <div class="home1-testm item">
-                    <div class="home1-testm-single text-center">
-                        <div class="home1-testm-img">
-                            <img src="assets/images/client/testimonial1.jpg" alt="img" />
-                        </div><!--/.home1-testm-img-->
-                        <div class="home1-testm-txt">
-                            <span class="icon section-icon">
-                                <i class="fa fa-quote-left" aria-hidden="true"></i>
-                            </span>
-                            <p>
-                                Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam.
-                            </p>
-                            <h3>
-                                <a href="#">
-                                    kevin watson
-                                </a>
-                            </h3>
-                            <h4>london, england</h4>
-                        </div><!--/.home1-testm-txt-->
-                    </div><!--/.home1-testm-single-->
-
-                </div><!--/.item-->
-
-            </div><!--/.testemonial-carousel-->
-        </div><!--/.container-->
-
-    </section><!--/.testimonial-->
-    <!-- testemonial End -->
 
 
     <!--blog start-->
@@ -566,99 +258,44 @@
             <div class="blog-details">
                 <div class="gallary-header text-center">
                     <h2>
-                        latest news
+                        Ultimas Noticias
                     </h2>
                     <p>
-                        Travel News from all over the world
+                        Nuevas noticias del choco!
                     </p>
-                </div><!--/.gallery-header-->
+                </div>
                 <div class="blog-content">
                     <div class="row">
+                        @foreach ($articles as $article)
+                            <div class="col-sm-4 col-md-4">
+                                <div class="thumbnail">
+                                    <h2>Trending News <span>{{ $article['date'] }}</span></h2>
+                                    <div class="thumbnail-img">
+                                        <img src="{{ asset($article['image']) }}" alt="blog-img">
+                                        <div class="thumbnail-img-overlay"></div>
+                                    </div>
+                                    <div class="caption">
+                                        <div class="blog-txt">
+                                            <h3>
+                                                <a href="{{ $article['url'] }}">
+                                                    {{ $article['title'] }}
+                                                </a>
+                                            </h3>
+                                            <p>
+                                                {{ $article['description'] }}
+                                            </p>
 
-                        <div class="col-sm-4 col-md-4">
-                            <div class="thumbnail">
-                                <h2>trending news <span>15 november 2017</span></h2>
-                                <div class="thumbnail-img">
-                                    <img src="assets/images/blog/b1.jpg" alt="blog-img">
-                                    <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                                </div><!--/.thumbnail-img-->
-
-                                <div class="caption">
-                                    <div class="blog-txt">
-                                        <h3>
-                                            <a href="#">
-                                                Discover on beautiful weather, Fantastic foods and historical place in
-                                                Prag
-                                            </a>
-                                        </h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et
-                                            dolore magna aliqua. Ut enim ad minim veniam
-                                        </p>
-                                        <a href="#">Read More</a>
-                                    </div><!--/.blog-txt-->
-                                </div><!--/.caption-->
-                            </div><!--/.thumbnail-->
-
-                        </div><!--/.col-->
-
-                        <div class="col-sm-4 col-md-4">
-                            <div class="thumbnail">
-                                <h2>trending news <span>15 november 2017</span></h2>
-                                <div class="thumbnail-img">
-                                    <img src="assets/images/blog/b2.jpg" alt="blog-img">
-                                    <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
-
-                                </div><!--/.thumbnail-img-->
-                                <div class="caption">
-                                    <div class="blog-txt">
-                                        <h3>
-                                            <a href="#">
-                                                Discover on beautiful weather, Fantastic foods and historical place in
-                                                india
-                                            </a>
-                                        </h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et
-                                            dolore magna aliqua. Ut enim ad minim veniam
-                                        </p>
-                                        <a href="#">Read More</a>
-                                    </div><!--/.blog-txt-->
-                                </div><!--/.caption-->
-                            </div><!--/.thumbnail-->
-
-                        </div><!--/.col-->
-
-                        <div class="col-sm-4 col-md-4">
-                            <div class="thumbnail">
-                                <h2>trending news <span>15 november 2017</span></h2>
-                                <div class="thumbnail-img">
-                                    <img src="assets/images/blog/b3.jpg" alt="blog-img">
-                                    <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
-
-                                </div><!--/.thumbnail-img-->
-                                <div class="caption">
-                                    <div class="blog-txt">
-                                        <h3><a href="#">10 Most Natural place to Discover</a></h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et
-                                            dolore magna aliqua. Ut enim ad minim veniam
-                                        </p>
-                                        <a href="#">Read More</a>
-                                    </div><!--/.blog-txt-->
-                                </div><!--/.caption-->
-                            </div><!--/.thumbnail-->
-
-                        </div><!--/.col-->
-
-                    </div><!--/.row-->
-                </div><!--/.blog-content-->
-            </div><!--/.blog-details-->
-        </div><!--/.container-->
-
-    </section><!--/.blog-->
-    <!--blog end-->
 
 
     <!-- footer-copyright start -->
@@ -670,12 +307,7 @@
                     <div class="col-sm-3">
                         <div class="single-footer-item">
                             <div class="footer-logo">
-                                <a href="index.html">
-                                    tour<span>Nest</span>
-                                </a>
-                                <p>
-                                    best travel agency
-                                </p>
+                                <img src="{{url('assets/images/logo/CHOCO_TRAVEL-removebg-preview.png')}}" alt="">
                             </div>
                         </div><!--/.single-footer-item-->
                     </div><!--/.col-->
@@ -723,21 +355,7 @@
                 </div><!--/.row-->
 
             </div><!--/.footer-content-->
-            <hr>
-            <div class="foot-icons ">
-                <ul class="footer-social-links list-inline list-unstyled">
-                    <li><a href="#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
-                </ul>
-                <p>&copy; 2017 <a href="https://www.themesine.com">ThemeSINE</a>. All Right Reserved</p>
 
-            </div><!--/.foot-icons-->
-            <div id="scroll-Top">
-                <i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip"
-                    data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-            </div><!--/.scroll-Top-->
-        </div><!-- /.container-->
 
     </footer><!-- /.footer-copyright-->
     <!-- footer-copyright end -->
