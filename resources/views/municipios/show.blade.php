@@ -9,9 +9,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
 
-    <!-- TITLE OF SITE -->
-    <title>Choco Travel</title>
+    
 
+    <link rel="shortcut icon" type="image/icon" href={{url('assets/images/logo/logo.png')}} />
     <!-- font-awesome.min.css -->
     <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}" />
 
@@ -153,7 +153,7 @@
     <!-- Columna derecha con texto centrado -->
     <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; ">
         <h1>{{ $nombre }}</h1>
-        <p>{{ $descripcion }}</p>
+        <p class="p">{{ $descripcion }}</pcla>
         <p><strong>Precio:</strong> {{ $precio }} USD</p>
         <a href="/" class="back-link" style="display: inline-block; margin-top: 10px;">Volver a la lista de municipios</a>
     </div>

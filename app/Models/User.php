@@ -10,7 +10,14 @@ class User extends Model implements AuthenticatableContract
 {
     use Authenticatable;
 
-    protected $fillable = ['name', 'email', 'password'];
+    // Campos que se pueden asignar masivamente
+    protected $fillable = ['name', 'email', 'password', 'role'];
 
+    // Campos que no se deben mostrar en las respuestas
     protected $hidden = ['password', 'remember_token'];
+
+    // Puedes definir valores predeterminados para el rol aquí si lo deseas
+    protected $attributes = [
+        'role' => 'user', // Valor predeterminado
+    ];
 }

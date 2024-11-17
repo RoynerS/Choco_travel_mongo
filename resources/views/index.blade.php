@@ -238,7 +238,8 @@
                                     </p>
                                 </a>
                             @else
-                                <p><a href="{{ route('login') }}" >{{ $municipio }}<br> Inicia sesión para ver más detalles</a></p>
+                                <p><a href="{{ route('login') }}">{{ $municipio }}<br> Inicia sesión para ver más detalles</a>
+                                </p>
                             @endif
                         </div>
                     @endforeach
@@ -256,24 +257,31 @@
     <section id="blog" class="blog">
         <div class="container">
             <div class="blog-details">
+                <!-- Encabezado de la galería -->
                 <div class="gallary-header text-center">
-                    <h2>
-                        Ultimas Noticias
-                    </h2>
-                    <p>
-                        Nuevas noticias del choco!
-                    </p>
+                    <h2>Últimas Noticias</h2>
+                    <p>Nuevas noticias del Chocó!</p>
                 </div>
+
+                <!-- Contenido del blog -->
                 <div class="blog-content">
                     <div class="row">
                         @foreach ($articles as $article)
                             <div class="col-sm-4 col-md-4">
                                 <div class="thumbnail">
-                                    <h2>Trending News <span>{{ $article['date'] }}</span></h2>
+                                    <!-- Encabezado del artículo -->
+                                    <h2>
+                                        Trending News <span>{{ $article['date'] }}</span>
+                                    </h2>
+
+                                    <!-- Imagen del artículo -->
                                     <div class="thumbnail-img">
-                                        <img src="{{ asset($article['image']) }}" alt="blog-img">
+                                        <img src="{{ asset($article['image']) }}" alt="{{ $article['title'] }}"
+                                            class="img-responsive">
                                         <div class="thumbnail-img-overlay"></div>
                                     </div>
+
+                                    <!-- Detalles del artículo -->
                                     <div class="caption">
                                         <div class="blog-txt">
                                             <h3>
@@ -284,7 +292,6 @@
                                             <p>
                                                 {{ $article['description'] }}
                                             </p>
-
                                         </div>
                                     </div>
                                 </div>
@@ -295,6 +302,7 @@
             </div>
         </div>
     </section>
+
 
 
 
