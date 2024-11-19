@@ -46,7 +46,7 @@ class AuthController extends Controller
             // Redirigir a la página principal para usuarios normales
             return redirect('/')->with('success', 'Inicio de sesión exitoso');
         } else {
-            return redirect()->back()->withErrors(['email' => 'Credenciales inválidas']);
+            return redirect()->back()->withErrors(['email' => 'Credenciales inválidas']);       
         }
     }
     public function logout(Request $request)

@@ -292,6 +292,7 @@
                                             <p>
                                                 {{ $article['description'] }}
                                             </p>
+
                                         </div>
                                     </div>
                                 </div>
