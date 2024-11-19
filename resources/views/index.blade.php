@@ -90,9 +90,9 @@
                             </div><!-- /.navbar-header-->
                             <div class="collapse navbar-collapse">
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li class="smooth-menu"><a href="#home">INICIO</a></li>
-                                    <li class="smooth-menu"><a href="#gallery">DESTINOS</a></li>
-                                    <li class="smooth-menu"><a href="#blog">RESEÑAS</a></li>
+                                    <li class="smooth-menu"><a href="#home">Inicio</a></li>
+                                    <li class="smooth-menu"><a href="#gallery">Destinos</a></li>
+                                    <li class="smooth-menu"><a href="#blog">Noticias</a></li>
                                     @if (Auth::check())
                                         <li class="smooth-menu"><a href="Lo">{{ Auth::user()->name }}</a></li>
                                         <li class="smooth-menu">
@@ -271,7 +271,7 @@
                                 <div class="thumbnail">
                                     <!-- Encabezado del artículo -->
                                     <h2>
-                                        Trending News <span>{{ $article['date'] }}</span>
+                                        Noticias principales <span>{{ $article['date'] }}</span>
                                     </h2>
 
                                     <!-- Imagen del artículo -->

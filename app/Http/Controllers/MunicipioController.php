@@ -219,22 +219,4 @@ class MunicipioController extends Controller
 }
 
 
-    public function convertirMoneda(Request $request)
-    {
-        // Validar los datos del formulario
-        $request->validate([
-            'precio' => 'required|numeric',
-            'tasaCambio' => 'required|numeric',
-        ]);
-
-        // Obtener los valores
-        $precio = $request->input('precio');
-        $tasaCambio = $request->input('tasaCambio');
-
-        // Calcular la conversión
-        $precioConvertido = $precio * $tasaCambio;
-
-        // Retornar el resultado
-        return back()->with('mensaje', "El precio convertido es: $precioConvertido");
-    }
 }
