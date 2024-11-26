@@ -219,6 +219,10 @@
                 <a href="/" class="nav-link">Choco Travel</a>
             </li>
             <li class="nav-item">
+                <a href="/admin/users" class="nav-link">Gestion de usuarios</a>
+            </li>
+            
+            <li class="nav-item">
                 @if (Auth::check())
                     <li class="smooth-menu">
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

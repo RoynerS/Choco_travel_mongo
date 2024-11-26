@@ -61,3 +61,8 @@ Route::get('/admin', function () {
     return view('admin.dashboard'); // Renderiza la vista de prueba
 })->name('dash');
 
+use App\Http\Controllers\UserController;
+
+Route::prefix('admin')->group(function () {
+    Route::resource('users', UserController::class)->except(['show', 'create', 'edit']);
+});
