@@ -60,3 +60,4 @@ Route::post('/convertir', [MunicipioController::class, 'convertirMoneda'])->name
 Route::get('/admin', function () {
     return view('admin.dashboard'); // Renderiza la vista de prueba
 })->name('dash');
+

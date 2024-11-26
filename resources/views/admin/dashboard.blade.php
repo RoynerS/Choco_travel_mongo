@@ -314,6 +314,7 @@
 
         </div>
     </div>
+    
 
     <!-- Scripts de Bootstrap y JavaScript para la navegación -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

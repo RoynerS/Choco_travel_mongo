@@ -143,6 +143,15 @@
 
     </section><!--/.about-us-->
     <!--about-us end -->
+    <ul class="izq">
+          <select id="selectPais" onchange="convertirPrecios()">
+            <option disabled selected>Selecciona una moneda</option>
+            <option value="colombia">Peso Colombiano (COP)</option>
+            <option value="mexico">Peso Mexicano (MXN)</option>
+            <option value="argentina">Peso Argentino (ARS)</option>
+            <option value="Euros">Euro (EU)</option>
+          </select>
+        </ul>
 
     <div class="municipio-container" style="display: flex; justify-content: space-between; padding: 4rem;">
     <!-- Columna izquierda con imagen -->
@@ -154,15 +163,14 @@
     <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; ">
         <h1>{{ $nombre }}</h1>
         <p class="p">{{ $descripcion }}</pcla>
-        <p><strong>Precio:</strong> {{ $precio }} USD</p>
+        <p><strong>Precio:</strong> <li> <br><span class="precioEnDolares">{{ $precio }}</span> USD <span class="precioConvertido"></span></li> </p>
         <a href="/" class="back-link" style="display: inline-block; margin-top: 10px;">Volver a la lista de municipios</a>
     </div>
 </div>
 
 </div>
 
- <!-- footer-copyright start -->
- <footer class="footer-copyright">
+<footer class="footer-copyright">
         <div class="container">
             <div class="footer-content">
                 <div class="row">
@@ -170,25 +178,62 @@
                     <div class="col-sm-3">
                         <div class="single-footer-item">
                             <div class="footer-logo">
-                            <img src="{{url('assets/images/logo/CHOCO_TRAVEL-removebg-preview.png')}}" alt="">
+                                <img src="{{url('assets/images/logo/CHOCO_TRAVEL-removebg-preview.png')}}" alt="">
                             </div>
                         </div><!--/.single-footer-item-->
                     </div><!--/.col-->
 
-                    
+                    <div class="col-sm-3">
+                        <div class="single-footer-item">
+                            <h2>link</h2>
+                            <div class="single-footer-txt">
+                                <p><a href="#">---  </a></p>
+                                <p><a href="#">---</a></p>
+                                <p><a href="#">---</a></p>
+                                <p><a href="#">---</a></p>
+                                <p><a href="#">---</a></p>
+                                <p><a href="#">---</a></p>
+                            </div><!--/.single-footer-txt-->
+                        </div><!--/.single-footer-item-->
 
-                    </div><!--/.col-->  q
+                    </div><!--/.col-->
+
+                    <div class="col-sm-3">
+                        <div class="single-footer-item">
+                            <h2>Lugares Populares</h2>
+                            <div class="single-footer-txt">
+                                <p><a href="#">Quibdo</a></p>
+                                <p><a href="#">Certegui</a></p>
+                                <p><a href="#">Bagado</a></p>
+                            </div><!--/.single-footer-txt-->
+                        </div><!--/.single-footer-item-->
+                    </div><!--/.col-->
+
+                    <div class="col-sm-3">
+                        <div class="single-footer-item text-center">
+                            <h2 class="text-left">Contactanos</h2>
+                            <div class="single-footer-txt text-left">
+                                <p>+57 (314)8042483</p>
+                                <p class="foot-email"><a href="#">roynersimon45@gmail.com</a></p>
+                                
+                            </div><!--/.single-footer-txt-->
+                        </div><!--/.single-footer-item-->
+                    </div><!--/.col-->
 
                 </div><!--/.row-->
 
             </div><!--/.footer-content-->
-            
+
 
     </footer><!-- /.footer-copyright-->
     <!-- footer-copyright end -->
 
 
     <!-- jQuery -->
+
+    <script src="{{asset('assets/js/precios.js')}}"></script>
+
+
     <script src="{{ asset('assets/js/jquery.js') }}"></script>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
